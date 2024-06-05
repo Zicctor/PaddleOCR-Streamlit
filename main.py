@@ -43,11 +43,11 @@ if uploaded_image is not None:
     boxes = [line[0] for line in result[0]]
     txts = [line[1][0] for line in result[0]]
     scores = [line[1][1] for line in result[0]]
-    im_show = draw_ocr(np.array(image), boxes, txts, scores, font_path="/home/zicctor-vu/Documents/PaddleOCR-Vietnamese2/font-times-new-roman.ttf")
+    im_show = draw_ocr(np.array(image), boxes, txts, scores, font_path="font-times-new-roman.ttf")
     im_show = Image.fromarray(im_show)
     st.image(im_show, caption="Result", use_column_width=True)
 
-    # Display recognized text in a text area
-    text_area = st.text_area("Recognized Text", recognized_text)
+    # Display recognized text in a larger text area
+    text_area = st.text_area("Recognized Text", recognized_text, height=300)
 
     st.write("Copy the text manually from the text area above.")
