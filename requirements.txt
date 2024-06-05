@@ -3,4 +3,4 @@ paddleocr
 numpy
 Pillow
 paddlepaddle
-opencv-python
+opencv-python-headless
